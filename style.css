@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+body{
+    margin: 0;
+    text-align: center;
+    font-family: 'Ubuntu Mono';
+    background-color: rgb(168, 168, 168);
+}
+h1{
+    margin: 2rem 0.5rem;
+}
+.speedContainer{
+    background-color: #333;
+    color: #ffff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.speedContainer .speed span{
+    font-size: 1.5rem;
+}
+.words{
+    text-align: left;
+    width: 70vw;
+    background-color: rgb(204, 204, 204);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-size: 34px;
+    border-radius: 20px;
+}
+.words span.active{
+    animation: highlight 600ms infinite;
+}
+.btns button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+.btns button:focus{
+    outline: none;
+}
+.btns button:active{
+    background-color: rgb(233, 233, 233);
+}
+.btns button.unactive{
+    background-color: rgb(233, 233, 233);
+    cursor: not-allowed;
+}
+@keyframes highlight {
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: #ffff;
+    }
+}
