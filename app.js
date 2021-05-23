@@ -3,9 +3,8 @@ let words = []
 let letterObjects
 let wordContainer = document.querySelector('.words')
 async function getWords(){
-    const res = await fetch('http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=2&maxLength=8&limit=40&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5')
-    const data = await res.json()
-    data.forEach(id => words.push(id.word))
+    const res = await fetch('https://random-word-api.herokuapp.com/word?number=10')
+    words = await res.json()
 }
 
 //optimize the words and show it
